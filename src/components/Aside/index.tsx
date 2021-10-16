@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useLayoutEffect } from 'react'
 import Icons from '~/components/Icons'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
@@ -202,19 +202,19 @@ export default function Aside({ preNext }: { preNext: any }) {
 		}
 	}
 
-	useEffect(() => {
-		const result = getAllHeaders()
-		const handler = result[1]
-		setHeadersResult(result[0][0])
-		setHeadersEl(result[2])
-		if (result[2].length) {
-			window.addEventListener('scroll', handler)
-		}
-		smoothScroll.polyfill()
-		return () => {
-			window.removeEventListener('scroll', handler)
-		}
-	}, [router.asPath])
+  useLayoutEffect(() => {
+    const result = getAllHeaders()
+    const handler = result[1]
+    setHeadersResult(result[0][0])
+    setHeadersEl(result[2])
+    if (result[2].length) {
+      window.addEventListener('scroll', handler)
+    }
+    smoothScroll.polyfill()
+    return () => {
+      window.removeEventListener('scroll', handler)
+    }
+  }, [router.asPath])
 
 	return (
 		<aside className="w-toc fixed top-24 -ml-82 hidden xl:block overflow-hidden overflow-y-auto max-h-aside aside overscroll-contain">
