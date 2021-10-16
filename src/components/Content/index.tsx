@@ -10,11 +10,11 @@ export default function Content(props: Props) {
 	const { children } = props
 	return (
 		<div>
-			<Header></Header>
+			<Header />
 			<main className="w-full min-h-main lg:w-content h-auto mx-auto pt-0 lg:pt-20 px-5 lg:px-10">
 				{children}
 			</main>
-			<Footer></Footer>
+			<Footer />
 		</div>
 	)
 }

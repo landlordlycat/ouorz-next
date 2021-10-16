@@ -135,7 +135,7 @@ export default function Header() {
 				setStartSearching={setStartSearching}
 				setEndSearching={setEndSearching}
 				endSearching={endSearching}
-			></Search>
+			/>
 		</header>
 	)
 }

@@ -23,12 +23,12 @@ const CardWithImagePodcast = ({ item, sticky }: Props) => {
 						blurDataURL={`${item.post_img.url}?imageMogr2/thumbnail/168x/format/webp/blur/1x0/quality/1|imageslim`}
 						className="rounded-md"
 						alt={`podcast-episode-cover-art-${item.post_title}`}
-					></Image>
+					/>
 				</div>
 				<div className="col-span-2 col-end-4">
 					<div className="flex space-x-3 items-center mb-4">
 						<div className="flex space-x-2 col-start-1 col-end-3">
-							{sticky && <Label name="sticky"></Label>}
+							{sticky && <Label name="sticky" />}
 							<Link href={`/cate/${item.post_categories[0].term_id}`}>
 								<a>
 									<Label name="primary" icon="microphone">
@@ -48,7 +48,7 @@ const CardWithImagePodcast = ({ item, sticky }: Props) => {
 						dangerouslySetInnerHTML={{
 							__html: DesSplit({ str: item.post_excerpt.four, n: 80 }),
 						}}
-					></p>
+					/>
 				</div>
 			</div>
 			<div className="lg:px-5 px-2 pt-4 pb-4">

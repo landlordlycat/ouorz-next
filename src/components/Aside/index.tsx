@@ -133,7 +133,7 @@ export default function Aside({ preNext }: { preNext: any }) {
 				</div>
 			)
 		} else {
-			return <div></div>
+			return <div />
 		}
 	}
 
@@ -162,7 +162,7 @@ export default function Aside({ preNext }: { preNext: any }) {
 							item={item}
 							inner={true}
 							recursionTimes={recursionTimes - 1}
-						></SubItem>
+						/>
 					) : (
 						item[2]
 					)}
@@ -193,7 +193,7 @@ export default function Aside({ preNext }: { preNext: any }) {
 							item={item}
 							inner={true}
 							recursionTimes={recursionTimes - 1}
-						></SubItem>
+						/>
 					) : (
 						item[2]
 					)}
@@ -234,12 +234,12 @@ export default function Aside({ preNext }: { preNext: any }) {
 											item={item}
 											inner={false}
 											recursionTimes={item[1] / 10}
-										></SubItem>
+										/>
 									)
 								})}
 						</ul>
 					</div>
-					<Tour></Tour>
+					<Tour />
 				</div>
 			) : (
 				''

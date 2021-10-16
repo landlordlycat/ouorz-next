@@ -46,15 +46,11 @@ export default function List({ posts, sticky, type, cate, target }: Props) {
 										sticky={sticky}
 										key={item.id}
 										setReader={setReader}
-									></CardWithImage>
+									/>
 								)
 							} else if (item.post_categories[0].term_id === 58) {
 								return (
-									<CardPlainText
-										item={item}
-										sticky={sticky}
-										key={item.id}
-									></CardPlainText>
+									<CardPlainText item={item} sticky={sticky} key={item.id} />
 								)
 							} else {
 								return (
@@ -63,27 +59,27 @@ export default function List({ posts, sticky, type, cate, target }: Props) {
 										sticky={sticky}
 										key={item.id}
 										setReader={setReader}
-									></CardWithOutImage>
+									/>
 								)
 							}
 						}
 					})}
 				</div>
 				<div>
-					<Reader data={reader} setReader={setReader}></Reader>
+					<Reader data={reader} setReader={setReader} />
 				</div>
 			</div>
 		)
 	} else {
 		switch (type) {
 			case 'index':
-				return <InfiniteList type="index"></InfiniteList>
+				return <InfiniteList type="index" />
 			case 'cate':
-				return <InfiniteList type="cate" cate={cate}></InfiniteList>
+				return <InfiniteList type="cate" cate={cate} />
 			case 'search':
-				return <InfiniteList type="search" target={target}></InfiniteList>
+				return <InfiniteList type="search" target={target} />
 			default:
-				return <div key="Empty post list"></div>
+				return <div key="Empty post list" />
 		}
 	}
 }
@@ -150,8 +146,8 @@ const InfiniteList = ({
 					<CardClickable
 						setStopLoading={setStopLoading}
 						stopLoading={stopLoading}
-					></CardClickable>
-					<CardSkeleton></CardSkeleton>
+					/>
+					<CardSkeleton />
 				</div>
 			}
 			endMessage={
@@ -159,15 +155,15 @@ const InfiniteList = ({
 					<CardClickable
 						setStopLoading={setStopLoading}
 						stopLoading={stopLoading}
-					></CardClickable>
+					/>
 				) : (
-					<CardEmpty></CardEmpty>
+					<CardEmpty />
 				)
 			}
 			scrollThreshold="50px"
 			scrollableTarget={type === 'search' ? 'searchResultsDiv' : ''}
 		>
-			<List posts={postsData}></List>
+			<List posts={postsData} />
 		</InfiniteScroll>
 	)
 }

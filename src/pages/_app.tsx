@@ -12,7 +12,7 @@ function App({ Component, pageProps }: AppProps) {
 				defer
 				src="https://static.cloudflareinsights.com/beacon.min.js"
 				data-cf-beacon='{"token": "53f3652793b44758819338f853f944e4", "spa": true}'
-			></Script>
+			/>
 			<NextNprogress
 				color="#D1D5DB"
 				height={2}

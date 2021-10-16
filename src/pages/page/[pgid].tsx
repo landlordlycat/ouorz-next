@@ -25,8 +25,8 @@ export default function BlogPage({
 					<link
 						rel="icon"
 						href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📄</text></svg>"
-					></link>
-					<meta name="description" content={page.title.rendered}></meta>
+					/>
+					<meta name="description" content={page.title.rendered} />
 				</Head>
 				<Page>
 					<article
@@ -45,10 +45,10 @@ export default function BlogPage({
 								<span>{page.post_metas.views} Views</span>
 							</p>
 						</div>
-						<PostContent content={page.content.rendered}></PostContent>
+						<PostContent content={page.content.rendered} />
 					</article>
 					<div className="mt-5">
-						<SubscriptionBox type="lg"></SubscriptionBox>
+						<SubscriptionBox type="lg" />
 					</div>
 					<CommentBox />
 				</Page>

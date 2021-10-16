@@ -49,7 +49,7 @@ export const CardTool = ({
 								setReader({ status: true, post: item })
 							}}
 						>
-							<Label name="gray" icon="preview"></Label>
+							<Label name="gray" icon="preview" />
 						</a>
 					)}
 					<a
@@ -75,7 +75,7 @@ export default function CardWithImageTool({ item, sticky, setReader }: Props) {
 			}`}
 		>
 			<div className="p-5 lg:p-10">
-				<CardTool item={item} preview={true} setReader={setReader}></CardTool>
+				<CardTool item={item} preview={true} setReader={setReader} />
 				<div className="mt-6">
 					<Link href={`/post/${item.id}`}>
 						<a>
@@ -90,10 +90,10 @@ export default function CardWithImageTool({ item, sticky, setReader }: Props) {
 						dangerouslySetInnerHTML={{
 							__html: DesSplit({ str: item.post_excerpt.four, n: 150 }),
 						}}
-					></p>
+					/>
 				</div>
 			</div>
-			<BottomCard item={item}></BottomCard>
+			<BottomCard item={item} />
 		</div>
 	)
 }

@@ -16,15 +16,12 @@ export default function Home({ stickyNotFound, stickyPosts }: Sticky) {
 		<div>
 			<Head>
 				<title>TonyHe</title>
-				<link rel="icon" type="image/x-icon" href="/favicon.ico"></link>
-				<meta
-					name="description"
-					content="A developer, blogger, podcaster"
-				></meta>
+				<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+				<meta name="description" content="A developer, blogger, podcaster" />
 				<meta
 					name="keywords"
 					content="TonyHe, Lipeng He, Tony, Developer, Blogger, Podcaster, Blog, Personal Site, WordPress, Next.js, React.js, TypeScript, JavaScript"
-				></meta>
+				/>
 			</Head>
 			<Content>
 				<div className="lg:mt-20 mt-0 lg:pt-0 pt-24">
@@ -53,10 +50,10 @@ export default function Home({ stickyNotFound, stickyPosts }: Sticky) {
 					<Top />
 				</div>
 				<div className="mt-10">
-					{!stickyNotFound && <List posts={stickyPosts} sticky={true}></List>}
+					{!stickyNotFound && <List posts={stickyPosts} sticky={true} />}
 				</div>
 				<div className="mt-5">
-					<List type="index"></List>
+					<List type="index" />
 				</div>
 			</Content>
 		</div>

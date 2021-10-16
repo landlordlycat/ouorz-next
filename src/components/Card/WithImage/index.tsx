@@ -15,12 +15,7 @@ interface Props {
 export default function CardWithImage({ item, sticky, setReader }: Props) {
 	if (typeof item.post_metas.fineTool === 'undefined') {
 		if (item.post_categories[0].term_id === 120) {
-			return (
-				<CardWithImagePodcast
-					item={item}
-					sticky={sticky}
-				></CardWithImagePodcast>
-			)
+			return <CardWithImagePodcast item={item} sticky={sticky} />
 		} else {
 			return (
 				<div className="w-full shadow-sm bg-white dark:bg-gray-800 dark:border-gray-800 rounded-md border mb-6">
@@ -39,7 +34,7 @@ export default function CardWithImage({ item, sticky, setReader }: Props) {
 						<div className="col-span-2 col-end-4">
 							<div className="flex space-x-3 items-center">
 								<div className="flex space-x-2 col-start-1 col-end-3">
-									{sticky && <Label name="sticky"></Label>}
+									{sticky && <Label name="sticky" />}
 									<Link href={`/cate/${item.post_categories[0].term_id}`}>
 										<a>
 											<Label name="primary" icon="cate">
@@ -72,21 +67,17 @@ export default function CardWithImage({ item, sticky, setReader }: Props) {
 									dangerouslySetInnerHTML={{
 										__html: DesSplit({ str: item.post_excerpt.four, n: 150 }),
 									}}
-								></p>
+								/>
 							</div>
 						</div>
 					</div>
-					<BottomCard item={item}></BottomCard>
+					<BottomCard item={item} />
 				</div>
 			)
 		}
 	} else {
 		return (
-			<CardWithImageTool
-				item={item}
-				sticky={sticky}
-				setReader={setReader}
-			></CardWithImageTool>
+			<CardWithImageTool item={item} sticky={sticky} setReader={setReader} />
 		)
 	}
 }

@@ -58,7 +58,7 @@ const SubscriptionBox = ({ type }: { type: string }) => {
 									doSubscribe()
 								}
 							}}
-						></input>
+						/>
 					)}
 				</div>
 			</div>
@@ -89,7 +89,7 @@ const SubscriptionBox = ({ type }: { type: string }) => {
 									doSubscribe()
 								}
 							}}
-						></input>
+						/>
 						{subscribed ? (
 							<div className="bg-green-500 border border-green-600 cursor-pointer shadow-sm col-start-3 col-end-4 rounded-tr-md rounded-br-md text-center text-green-50 flex items-center">
 								<span className="mx-auto">Succeed</span>

@@ -30,7 +30,7 @@ export default function Reader({
 							.getElementsByTagName('body')[0]
 							.classList.remove('stop-scrolling')
 					}}
-				></div>
+				/>
 				<div
 					className={`z-20 fixed bg-white dark:bg-gray-800 dark:border-gray-800 shadow-md reader overflow-y-auto overflow-hidden rounded-tl-xl rounded-tr-xl px-20 py-16 w-page mx-auto top-0 mt-20 ml-readerOffset ${
 						data.status ? 'animate-reader' : 'animate-readerOut'
@@ -57,7 +57,7 @@ export default function Reader({
 							</span>
 						</span>
 					</p>
-					<PostContent content={data.post.content.rendered}></PostContent>
+					<PostContent content={data.post.content.rendered} />
 				</div>
 			</div>
 		)

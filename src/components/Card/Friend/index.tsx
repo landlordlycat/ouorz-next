@@ -15,7 +15,7 @@ export default function CardFriend({ item }: Props) {
 					width={50}
 					height={50}
 					className="border shadow-sm"
-				></Image>
+				/>
 				<div>
 					<Link href={`/post/${item.id}`}>
 						<a>
@@ -29,7 +29,7 @@ export default function CardFriend({ item }: Props) {
 						dangerouslySetInnerHTML={{
 							__html: DesSplit({ str: item.post_excerpt.four, n: 150 }),
 						}}
-					></p>
+					/>
 				</div>
 			</div>
 		</div>

@@ -30,13 +30,13 @@ export default function BlogPost({
 					<link
 						rel="icon"
 						href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📃</text></svg>"
-					></link>
+					/>
 					<meta
 						name="description"
 						content={DesSplit({ str: post.post_excerpt.four, n: 150 })}
-					></meta>
+					/>
 					{post.post_img.url && (
-						<meta property="og:image" content={post.post_img.url}></meta>
+						<meta property="og:image" content={post.post_img.url} />
 					)}
 				</Head>
 				<Page>
@@ -79,7 +79,7 @@ export default function BlogPost({
 						<PostContent content={post.content.rendered} />
 						{post.post_categories[0].term_id === 4 && (
 							<div className="mt-12">
-								<CardTool item={post} preview={false}></CardTool>
+								<CardTool item={post} preview={false} />
 							</div>
 						)}
 					</article>

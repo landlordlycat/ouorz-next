@@ -10,7 +10,7 @@ export default function PageNotFound() {
 		<div>
 			<Head>
 				<title>404 - TonyHe</title>
-				<link rel="icon" type="image/x-icon" href="/favicon.ico"></link>
+				<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 			</Head>
 			<Content>
 				<div className="lg:mt-20 mt-0 lg:pt-0 pt-24 justify-center">

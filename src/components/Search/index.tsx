@@ -42,7 +42,7 @@ export default function Search({
 							: ''
 					}`}
 					onClick={terminateSearch}
-				></div>
+				/>
 				<div
 					id="searchResultsDiv"
 					className={`fixed transition-all ease-linear overflow-y-auto overflow-hidden rounded-tl-xl reader rounded-tr-xl py-5 lg:py-20 lg:w-content w-full mx-auto lg:left-searchOffset top-0 mt-20 px-5 lg:px-10 ${
@@ -86,7 +86,7 @@ export default function Search({
 					</div>
 					<div onClick={terminateSearch}>
 						{searchResultsDisplay && (
-							<List type="search" target={searchContent}></List>
+							<List type="search" target={searchContent} />
 						)}
 					</div>
 				</div>

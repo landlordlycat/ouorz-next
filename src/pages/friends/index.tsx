@@ -16,8 +16,8 @@ export default function Friends({ friends }: { friends: any }) {
 				<link
 					rel="icon"
 					href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧑‍🤝‍🧑</text></svg>"
-				></link>
-				<meta name="description" content="TonyHe's friends' sites"></meta>
+				/>
+				<meta name="description" content="TonyHe's friends' sites" />
 			</Head>
 			<Content>
 				<div className="lg:mt-20 mt-0 lg:pt-0 pt-24">
@@ -67,7 +67,7 @@ export default function Friends({ friends }: { friends: any }) {
 												width={20}
 												height={20}
 												className="rounded-full border border-gray-200 dark:border-gray-500"
-											></Image>
+											/>
 											<span className="ml-2">{item.post_title}</span>
 										</h1>
 										<p
@@ -78,7 +78,7 @@ export default function Friends({ friends }: { friends: any }) {
 													n: 150,
 												}),
 											}}
-										></p>
+										/>
 									</a>
 								</div>
 							</div>
