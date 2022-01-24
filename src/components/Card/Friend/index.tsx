@@ -11,6 +11,7 @@ export default function CardFriend({ item }: Props) {
 		<div className="w-full shadow-sm bg-white rounded-md border mb-6">
 			<div className="flex">
 				<Image
+					loader={({ src }) => src}
 					src={item.post_img.url}
 					width={50}
 					height={50}

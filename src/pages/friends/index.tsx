@@ -63,6 +63,7 @@ export default function Friends({ friends }: { friends: any }) {
 									>
 										<h1 className="flex items-center text-2xl tracking-wide font-medium mb-0.5">
 											<Image
+												loader={({ src }) => src}
 												src={item.post_img.url}
 												width={20}
 												height={20}

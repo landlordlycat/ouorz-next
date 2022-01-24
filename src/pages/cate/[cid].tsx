@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import React from 'react'
 import Content from '~/components/Content'
-import { GetServerSideProps } from 'next'
+import { GetStaticProps, GetStaticPaths } from 'next'
 import List from '~/components/List'
 import { getApi } from '~/assets/utilities/Api'
 import SubscriptionBox from '~/components/SubscriptionBox'
@@ -81,7 +81,7 @@ export default function Cate({ info }: Info) {
 	}
 }
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
+export const getStaticProps: GetStaticProps = async (context) => {
 	const cid = context.params.cid
 
 	const resInfo = await fetch(
@@ -112,4 +112,19 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 			},
 		}
 	}
+}
+
+export const getStaticPaths: GetStaticPaths = async () => {
+	const res = await fetch(
+		getApi({
+			cateIDs: true,
+		})
+	)
+	const cateIDs: number[] = await res.json()
+
+	const paths = cateIDs.map((id) => ({
+		params: { cid: id.toString() },
+	}))
+
+	return { paths, fallback: false }
 }

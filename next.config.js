@@ -13,6 +13,7 @@ const NextConfigs = {
   // FIXME: https://github.com/getsentry/sentry-javascript/issues/4103
   outputFileTracing: false,
   images: {
+    loader: 'custom',
     domains: ['static.ouorz.com', 'storage.snapaper.com'],
   },
 }

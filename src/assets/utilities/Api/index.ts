@@ -13,6 +13,8 @@ interface Parameters {
 	subs?: boolean
 	count?: boolean
 	postIDs?: boolean
+	pageIDs?: boolean
+	cateIDs?: boolean
 }
 
 export const getApi = ({
@@ -30,6 +32,8 @@ export const getApi = ({
 	subs,
 	count,
 	postIDs,
+	pageIDs,
+	cateIDs,
 }: Parameters) => {
 	if (getCate) {
 		return `https://blog.ouorz.com/wp-json/wp/v2/categories/${cate}`
@@ -40,7 +44,15 @@ export const getApi = ({
 	}
 
 	if (postIDs) {
-		return 'https://blog.ouorz.com/wp-json/tony/v1/posts_ids'
+		return 'https://blog.ouorz.com/wp-json/tony/v1/post_ids'
+	}
+
+	if (pageIDs) {
+		return 'https://blog.ouorz.com/wp-json/tony/v1/post_ids'
+	}
+
+	if (cateIDs) {
+		return 'https://blog.ouorz.com/wp-json/tony/v1/post_ids'
 	}
 
 	if (page) {

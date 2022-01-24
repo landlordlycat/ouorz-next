@@ -67,6 +67,7 @@ export default function Header() {
 				<div className="cursor-pointer mx-auto hidden lg:flex space-x-3 items-center justify-center">
 					<div className="flex-shrink-0 h-7 w-7 border rounded-full border-gray-300 dark:border-gray-500">
 						<Image
+							loader={({ src }) => src}
 							className="rounded-full"
 							src="/tony.jpg"
 							alt="tony's logo"

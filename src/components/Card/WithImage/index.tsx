@@ -22,6 +22,7 @@ export default function CardWithImage({ item, sticky, setReader }: Props) {
 					<div className="p-5 lg:p-10 lg:grid lg:grid-flow-col lg:grid-cols-3 lg:gap-9">
 						<div className="dark:opacity-90 lg:block relative hidden rounded-md shadow-sm h-img min-h-full w-full col-span-1 col-end-2 border border-gray-200">
 							<Image
+								loader={({ src }) => src}
 								src={item.post_img.url}
 								layout="fill"
 								objectFit="cover"

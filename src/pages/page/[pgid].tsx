@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Page from '~/components/Page'
-import { GetServerSideProps } from 'next'
+import { GetStaticProps, GetStaticPaths } from 'next'
 import { getApi } from '~/assets/utilities/Api'
 import SubscriptionBox from '~/components/SubscriptionBox'
 import TimeAgo from 'react-timeago'
@@ -68,7 +68,7 @@ export default function BlogPage({
 	}
 }
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
+export const getStaticProps: GetStaticProps = async (context) => {
 	const pgid = context.params.pgid
 
 	// Increase page views
@@ -101,4 +101,19 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 			},
 		}
 	}
+}
+
+export const getStaticPaths: GetStaticPaths = async () => {
+	const res = await fetch(
+		getApi({
+			pageIDs: true,
+		})
+	)
+	const pageIDs: number[] = await res.json()
+
+	const paths = pageIDs.map((id) => ({
+		params: { pgid: id.toString() },
+	}))
+
+	return { paths, fallback: false }
 }

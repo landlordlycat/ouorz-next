@@ -16,6 +16,7 @@ const CardWithImagePodcast = ({ item, sticky }: Props) => {
 			<div className="lg:pt-10 pt-5 pl-5 pr-5 lg:pl-10 lg:pr-10 lg:grid lg:grid-flow-col lg:grid-cols-3 lg:gap-9">
 				<div className="lg:block hidden bg-gray-50 podcast-image-placeholder rounded-md shadow-sm border border-gray-200 dark:opacity-90">
 					<Image
+						loader={({ src }) => src}
 						src={item.post_img.url}
 						width={160}
 						height={160}

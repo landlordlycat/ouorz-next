@@ -167,5 +167,5 @@ export const getStaticPaths: GetStaticPaths = async () => {
 		params: { pid: id.toString() },
 	}))
 
-	return { paths, fallback: 'blocking' }
+	return { paths, fallback: false }
 }
