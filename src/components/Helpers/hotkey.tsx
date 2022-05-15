@@ -6,9 +6,9 @@ import { useHotkeys } from 'react-hotkeys-hook'
  *  for Kbar list items
  *
  * @param {{ item: KbarListItem }} { item }
- * @return {*}
+ * @return {*} null
  */
-const HotkeyHelper = ({ item }: { item: KbarListItem }) => {
+const HotkeyHelper = ({ item }: { item: KbarListItem }): null => {
 	useHotkeys(
 		`shift+${item.shortcut.join('+')}`,
 		(e) => {

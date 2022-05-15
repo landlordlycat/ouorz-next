@@ -17,7 +17,7 @@ export default function Reader() {
 
 	return (
 		visible && (
-			<div>
+			<div className="flex justify-center">
 				<div
 					className={`z-10 reader-bg ${
 						animation === 'in' ? 'animate-readerBg' : 'animate-readerBgOut'
